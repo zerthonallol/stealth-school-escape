@@ -28,3 +28,5 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Game rules (difficulty, noise) live in `src/game/config.ts` as pure TS with tests; the vanilla three.js engine is `src/game/Game.ts`, loaded via dynamic import from an `ssr: false` route — keeps rules testable and three.js out of SSR.
